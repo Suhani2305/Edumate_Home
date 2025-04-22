@@ -1,7 +1,9 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import PrivateRoute from './components/PrivateRoute';
+import LandingPage from './components/LandingPage';
 import Login from './components/Login';
+import Signup from './components/Signup';
 import Homepage from './components/Homepage';
 import Notes from './components/Notes';
 import QuizGenerator from './components/QuizGenerator';
@@ -49,7 +51,9 @@ function App() {
     <AuthProvider>
       <Routes>
         <Route path="/login" element={<Login />} />
-        <Route path="/" element={<Navigate to="/home" replace />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/landing" element={<LandingPage />} />
+        <Route path="/" element={<LandingPage />} />
         
         <Route element={<PrivateRoute />}>
           <Route path="/home" element={<Layout><Homepage /></Layout>} />
