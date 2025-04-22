@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Navbar from './Navbar';
 
 const QuizGenerator = () => {
   const [notes, setNotes] = useState('');
@@ -356,7 +355,6 @@ const QuizGenerator = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      <Navbar />
       <div className="bg-gradient-to-r from-[#3a8dff] to-[#a182ff] py-8">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl font-bold text-white mb-4 text-center">Quiz Generator</h1>

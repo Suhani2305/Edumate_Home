@@ -38,7 +38,6 @@ import {
   Edit as EditIcon,
   Share as ShareIcon
 } from '@mui/icons-material';
-import Navbar from './Navbar';
 
 const API_BASE_URL = 'http://localhost:5000/api';
 
@@ -399,8 +398,6 @@ const Notes = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Navbar />
-      
       {/* Header */}
       <div className="bg-gradient-to-r from-[#3a8dff] to-[#a182ff] py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
