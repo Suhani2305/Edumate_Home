@@ -9,18 +9,22 @@
       "src": "edumate/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "dist"
+        "distDir": "dist",
+        "buildCommand": "cd edumate && npm install && npm run build"
       }
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "backend/index.js"
+      "dest": "/backend/index.js"
+    },
+    {
+      "handle": "filesystem"
     },
     {
       "src": "/(.*)",
-      "dest": "edumate/dist/$1"
+      "dest": "/edumate/dist/index.html"
     }
   ],
   "env": {
