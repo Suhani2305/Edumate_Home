@@ -6,19 +6,7 @@ import Signup from './components/Signup';
 import Homepage from './components/Homepage';
 import QuizGenerator from './components/QuizGenerator';
 import Notes from './components/Notes';
-import Onboarding from './components/Onboarding';
 import PrivateRoute from './components/PrivateRoute';
-import { useAuth } from './context/AuthContext';
-
-const OnboardingCheck = ({ children }) => {
-  const { user } = useAuth();
-  
-  if (!user?.onboardingCompleted) {
-    return <Navigate to="/onboarding" />;
-  }
-  
-  return children;
-};
 
 function App() {
   return (
@@ -32,9 +20,7 @@ function App() {
             path="/home" 
             element={
               <PrivateRoute>
-                <OnboardingCheck>
-                  <Homepage />
-                </OnboardingCheck>
+                <Homepage />
               </PrivateRoute>
             } 
           />
@@ -42,9 +28,7 @@ function App() {
             path="/quiz-generator" 
             element={
               <PrivateRoute>
-                <OnboardingCheck>
-                  <QuizGenerator />
-                </OnboardingCheck>
+                <QuizGenerator />
               </PrivateRoute>
             } 
           />
@@ -52,17 +36,7 @@ function App() {
             path="/notes" 
             element={
               <PrivateRoute>
-                <OnboardingCheck>
-                  <Notes />
-                </OnboardingCheck>
-              </PrivateRoute>
-            } 
-          />
-          <Route 
-            path="/onboarding" 
-            element={
-              <PrivateRoute>
-                <Onboarding />
+                <Notes />
               </PrivateRoute>
             } 
           />

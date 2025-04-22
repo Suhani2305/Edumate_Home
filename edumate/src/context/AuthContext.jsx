@@ -154,28 +154,6 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-  const completeOnboarding = async (onboardingData) => {
-    try {
-      const response = await fetch('http://localhost:5000/api/auth/onboarding', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`
-        },
-        body: JSON.stringify(onboardingData)
-      });
-      const data = await response.json();
-      if (data.success) {
-        setUser(data.user);
-        return { success: true };
-      } else {
-        return { success: false, error: data.error };
-      }
-    } catch (error) {
-      return { success: false, error: 'Error connecting to server' };
-    }
-  };
-
   const logout = () => {
     localStorage.removeItem('token');
     setToken(null);
@@ -191,7 +169,6 @@ export const AuthProvider = ({ children }) => {
     googleAuth,
     microsoftAuth,
     updateProfile,
-    completeOnboarding,
     logout
   };
 
