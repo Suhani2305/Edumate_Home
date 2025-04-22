@@ -17,14 +17,18 @@
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/backend/index.js"
+      "dest": "backend/index.js"
     },
     {
       "handle": "filesystem"
     },
     {
+      "src": "/assets/(.*)",
+      "dest": "/dist/assets/$1"
+    },
+    {
       "src": "/(.*)",
-      "dest": "/edumate/dist/index.html"
+      "dest": "/dist/index.html"
     }
   ],
   "env": {
