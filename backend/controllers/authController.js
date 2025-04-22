@@ -3,13 +3,14 @@ const User = require('../models/User');
 const { OAuth2Client } = require('google-auth-library');
 const { Client } = require('@microsoft/microsoft-graph-client');
 const fetch = require('node-fetch');
+const bcrypt = require('bcrypt');
 
 const googleClient = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 
 // Generate JWT Token
 const generateToken = (user) => {
   return jwt.sign(
-    { id: user._id, role: user.role },
+    { id: user._id },
     process.env.JWT_SECRET,
     { expiresIn: '30d' }
   );
@@ -43,34 +44,61 @@ const generateGeminiResponse = async (prompt) => {
 // Register new user
 const register = async (req, res) => {
   try {
-    const { email, password, name, role } = req.body;
+    const { username, email, password } = req.body;
 
-    // Check if user already exists
-    const existingUser = await User.findOne({ email });
-    if (existingUser) {
-      return res.status(400).json({ error: 'User already exists' });
+    // Validate input
+    if (!username || !email || !password) {
+      return res.status(400).json({
+        success: false,
+        error: 'All fields (username, email, password) are required'
+      });
     }
 
+    // Check if username exists
+    const existingUsername = await User.findOne({ username });
+    if (existingUsername) {
+      return res.status(400).json({
+        success: false,
+        error: 'Username is already taken'
+      });
+    }
+
+    // Check if email exists
+    const existingEmail = await User.findOne({ email });
+    if (existingEmail) {
+      return res.status(400).json({
+        success: false,
+        error: 'Email is already registered. Please login'
+      });
+    }
+
+    // Hash password
+    const hashedPassword = await bcrypt.hash(password, 10);
+
     // Create new user
-    const user = new User({
+    const newUser = new User({
+      username,
       email,
-      password,
-      name,
-      role: role || 'student'
+      password: hashedPassword
     });
 
-    await user.save();
+    await newUser.save();
 
     // Generate token
-    const token = generateToken(user);
+    const token = generateToken(newUser);
 
     res.status(201).json({
       success: true,
       token,
-      user: user.getPublicProfile()
+      user: newUser.getPublicProfile()
     });
+
   } catch (error) {
-    res.status(500).json({ error: 'Error creating user' });
+    console.error('Registration error:', error);
+    res.status(500).json({
+      success: false,
+      error: 'Error during registration. Please try again.'
+    });
   }
 };
 
@@ -79,21 +107,31 @@ const login = async (req, res) => {
   try {
     const { email, password } = req.body;
 
+    // Validate input
+    if (!email || !password) {
+      return res.status(400).json({ 
+        success: false,
+        error: 'Please provide email and password' 
+      });
+    }
+
     // Find user
     const user = await User.findOne({ email });
     if (!user) {
-      return res.status(401).json({ error: 'Invalid credentials' });
+      return res.status(401).json({ 
+        success: false,
+        error: 'Invalid credentials' 
+      });
     }
 
     // Check password
     const isMatch = await user.comparePassword(password);
     if (!isMatch) {
-      return res.status(401).json({ error: 'Invalid credentials' });
+      return res.status(401).json({ 
+        success: false,
+        error: 'Invalid credentials' 
+      });
     }
-
-    // Update last login
-    user.lastLogin = Date.now();
-    await user.save();
 
     // Generate token
     const token = generateToken(user);
@@ -104,7 +142,11 @@ const login = async (req, res) => {
       user: user.getPublicProfile()
     });
   } catch (error) {
-    res.status(500).json({ error: 'Error logging in' });
+    console.error('Login error:', error);
+    res.status(500).json({ 
+      success: false,
+      error: 'Error logging in. Please try again.' 
+    });
   }
 };
 
@@ -256,7 +298,11 @@ const getCurrentUser = async (req, res) => {
       user: req.user.getPublicProfile()
     });
   } catch (error) {
-    res.status(500).json({ error: 'Error fetching user' });
+    console.error('Get user error:', error);
+    res.status(500).json({ 
+      success: false,
+      error: 'Error fetching user data' 
+    });
   }
 };
 
