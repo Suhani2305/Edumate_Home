@@ -9,7 +9,7 @@
       "src": "edumate/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "build"
+        "distDir": "dist"
       }
     }
   ],
@@ -20,7 +20,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "edumate/build/$1"
+      "dest": "edumate/dist/$1"
     }
   ],
   "env": {
