@@ -1,0 +1,342 @@
+%PDF-1.3
+%ºß¬à
+3 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 4 0 R
+>>
+endobj
+4 0 obj
+<<
+/Length 6229
+>>
+stream
+0.5670000000000001 w
+0 G
+BT
+/F1 20 Tf
+23. TL
+0 g
+56.6929133858267775 785.1970866141732586 Td
+(INT217Report.pdf) Tj
+ET
+BT
+/F1 12 Tf
+13.7999999999999989 TL
+0 g
+56.6929133858267775 728.5041732283464171 Td
+(# Crime Attrition Analysis in Washington D.C. \(2024\)) Tj
+T* () Tj
+T* (## Overview) Tj
+T* (This project analyzes crime data from Washington D.C. in 2024, sourced from the District) Tj
+T* (of Columbia’s Open Data Portal. Using Microsoft Excel, the study explores crime) Tj
+T* (distribution across different Wards and Advisory Neighbourhood Commissions \(ANCs\)) Tj
+T* (through data cleaning, aggregation, and visualization techniques like pivot tables, charts,) Tj
+T* (and filtering.  The analysis aims to identify crime trends, hotspots, and inform strategic) Tj
+T* (policing and policy planning for improved public safety.) Tj
+T* () Tj
+T* (## Key Points) Tj
+T* (* District 3 identified as a major crime hotspot.) Tj
+T* (* "Theft/Other" \(opportunistic crimes\) is the most prevalent crime type.) Tj
+T* (* January and evening hours experience peak criminal activity.) Tj
+T* (* ANCs play a crucial role in community awareness and crime reporting.) Tj
+T* (* Data-driven policing is essential for effective crime reduction.) Tj
+T* () Tj
+T* (## Detailed Summary) Tj
+T* () Tj
+T* (### Section 1: Introduction) Tj
+T* (This section introduces the importance of crime analysis in urban areas, using Washington) Tj
+T* (D.C. as a case study. It explains the use of the 2024 crime dataset from the Metropolitan) Tj
+T* (Police Department \(MPD\) and Microsoft Excel for data analysis. The primary objectives of) Tj
+T* (the analysis are outlined, focusing on understanding crime distribution across Wards,) Tj
+T* (ANCs, and geographical hotspots.) Tj
+T* () Tj
+T* (### Section 2: Source of Dataset) Tj
+T* (Details about the dataset are provided, including its source \(District of Columbia’s Open) Tj
+T* (Data Portal\), characteristics \(offense type, date/time, location, administrative zones\),) Tj
+T* (collection process by MPD, changes in methodology post-2020, and the strengths and) Tj
+T* (limitations of the data.) Tj
+T* () Tj
+T* (### Section 3: Dataset Preprocessing) Tj
+T* (The steps taken to clean and prepare the data for analysis in Excel are described. These) Tj
+T* (include importing the data, removing duplicates, normalizing text, handling missing values,) Tj
+T* (formatting coordinates, deleting incomplete rows, decomposing the date/time field, and) Tj
+T* (summarizing the cleaning operations.) Tj
+T* () Tj
+T* (### Section 4: Analysis of Dataset) Tj
+T* (This section comprises the core analysis, broken down into nine objectives:) Tj
+T* () Tj
+T* (* **Objective 1: Crime Type Distribution:**  Analysis of the distribution of different crime) Tj
+T* (types using a pivot table and pie chart.) Tj
+T* (* **Objective 2: Monthly Crime Trend:** Analysis of crime trends across months using a) Tj
+T* (pivot table and radar chart, focusing on the "Sum of CCN.") Tj
+T* (* **Objective 3: Shift-wise Crime Analysis:** Analysis of crime distribution across different) Tj
+T* (shifts \(day, evening, midnight\) using a pivot table and pie chart, incorporating filters for) Tj
+T* (offense type, district, and month.) Tj
+T* (* **Objective 4: Top 5 Districts:** Identification of the top 5 districts with the highest crime) Tj
+T* (rates using a pivot table and horizontal bar chart.) Tj
+T* (* **Objective 5: Neighbourhood-wise Analysis:** Analysis of crime distribution across) Tj
+T* (different neighborhood clusters using a pivot table and column chart.) Tj
+T* (* **Objective 6: Ward-wise Crime:** Analysis of offense type distribution across different) Tj
+T* (wards using a pivot table and 3D surface chart.) Tj
+T* (* **Objective 7: Ward-wise Location Spread:** Analysis of crime spread across wards) Tj
+T* (based on latitude and longitude using a pivot table and tree map.) Tj
+T* (* **Objective 8: X & Y Sum by Ward:**  Analysis of crime distribution using summed X and) Tj
+T* (Y coordinates \(likely a spatial representation\) per ward, visualized with a pivot table and) Tj
+T* (stacked horizontal bar chart.) Tj
+T* (* **Objective 9: ANC Count by Ward & Group:** Analysis of ANC count distribution across) Tj
+T* (wards and groups using a pivot table and 3D surface chart.) Tj
+T* () Tj
+T* (### Section 5: Conclusion) Tj
+T* (Key findings of the analysis are summarized, including the identification of District 3 as a) Tj
+T* (crime hotspot, the prevalence of "Theft/Other," temporal trends, and the importance of) Tj
+T* (ANCs and data-driven policing.) Tj
+T* () Tj
+T* (### Section 6: Future Scope) Tj
+T* (This section outlines potential future developments, including real-time data integration,) Tj
+T* (predictive modeling, inclusion of demographic data, mobile accessibility, enhanced) Tj
+T* (geospatial analysis, comparative studies, and community feedback integration.) Tj
+T* () Tj
+T* (### Section 7: References) Tj
+T* (Lists the data sources and academic references used in the project.) Tj
+T* () Tj
+T* () Tj
+T* (## Important Concepts) Tj
+T* (* **Data Preprocessing:** Crucial for cleaning and preparing raw data for analysis,) Tj
+T* (ensuring data quality and reliability.) Tj
+T* (* **Data Aggregation:** Grouping data by different categories \(e.g., ward, offense type\) to) Tj
+T* (identify trends and patterns.) Tj
+T* (* **Data Visualization:** Using charts and graphs to represent data visually, facilitating) Tj
+T* (understanding and interpretation.) Tj
+T* (* **Data-Driven Policing:** Using data analysis to inform policing strategies and resource) Tj
+T* (allocation for effective crime reduction.) Tj
+T* (* **ANC \(Advisory Neighbourhood Commission\):**  A local governing body in Washington) Tj
+T* (D.C. playing a role in community engagement and crime reporting.) Tj
+T* () Tj
+T* () Tj
+T* (## Practical Applications) Tj
+T* (* Targeted policing in high-crime areas like District 3.) Tj
+T* (* Public awareness campaigns to prevent opportunistic crimes.) Tj
+T* (* Increased police presence during peak crime hours \(evenings and January\).) Tj
+T* (* Collaboration with ANCs for community-based crime prevention initiatives.) Tj
+T* (* Development of predictive models for crime forecasting and resource allocation.) Tj
+T* () Tj
+ET
+endstream
+endobj
+1 0 obj
+<</Type /Pages
+/Kids [3 0 R ]
+/Count 1
+>>
+endobj
+5 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+6 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+7 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+8 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+9 0 obj
+<<
+/Type /Font
+/BaseFont /Courier
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+10 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+11 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+12 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+13 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Roman
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+14 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+15 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Italic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+16 0 obj
+<<
+/Type /Font
+/BaseFont /Times-BoldItalic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+17 0 obj
+<<
+/Type /Font
+/BaseFont /ZapfDingbats
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+18 0 obj
+<<
+/Type /Font
+/BaseFont /Symbol
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+2 0 obj
+<<
+/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]
+/Font <<
+/F1 5 0 R
+/F2 6 0 R
+/F3 7 0 R
+/F4 8 0 R
+/F5 9 0 R
+/F6 10 0 R
+/F7 11 0 R
+/F8 12 0 R
+/F9 13 0 R
+/F10 14 0 R
+/F11 15 0 R
+/F12 16 0 R
+/F13 17 0 R
+/F14 18 0 R
+>>
+/XObject <<
+>>
+>>
+endobj
+19 0 obj
+<<
+/Producer (jsPDF 3.0.1)
+/CreationDate (D:20250422090525+05'30')
+>>
+endobj
+20 0 obj
+<<
+/Type /Catalog
+/Pages 1 0 R
+/OpenAction [3 0 R /FitH null]
+/PageLayout /OneColumn
+>>
+endobj
+xref
+0 21
+0000000000 65535 f 
+0000006433 00000 n 
+0000008250 00000 n 
+0000000015 00000 n 
+0000000152 00000 n 
+0000006490 00000 n 
+0000006615 00000 n 
+0000006745 00000 n 
+0000006878 00000 n 
+0000007015 00000 n 
+0000007138 00000 n 
+0000007267 00000 n 
+0000007399 00000 n 
+0000007535 00000 n 
+0000007663 00000 n 
+0000007790 00000 n 
+0000007919 00000 n 
+0000008052 00000 n 
+0000008154 00000 n 
+0000008498 00000 n 
+0000008584 00000 n 
+trailer
+<<
+/Size 21
+/Root 20 0 R
+/Info 19 0 R
+/ID [ <4172C506D6E08D75AE54FDAF3E37EA4A> <4172C506D6E08D75AE54FDAF3E37EA4A> ]
+>>
+startxref
+8688
+%%EOF
