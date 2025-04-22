@@ -24,12 +24,12 @@
     }
   ],
   "env": {
-    "MONGODB_URI": "@mongodb_uri",
-    "JWT_SECRET": "@jwt_secret",
-    "GOOGLE_AI_API_KEY": "@google_ai_api_key",
-    "GOOGLE_CLIENT_ID": "@google_client_id",
-    "GOOGLE_CLIENT_SECRET": "@google_client_secret",
-    "MICROSOFT_CLIENT_ID": "@microsoft_client_id",
-    "MICROSOFT_CLIENT_SECRET": "@microsoft_client_secret"
+    "MONGODB_URI": "mongodb+srv://sunny:sunny@cluster0.x67vd0a.mongodb.net/Edumate?retryWrites=true&w=majority&appName=Cluster0",
+    "JWT_SECRET": "your_jwt_secret_here",
+    "GOOGLE_AI_API_KEY": "AIzaSyBfdPXxvX6EPEBdynqJZONafpoHW8RcJoQ",
+    "GOOGLE_CLIENT_ID": "your_google_client_id",
+    "GOOGLE_CLIENT_SECRET": "your_google_client_secret",
+    "MICROSOFT_CLIENT_ID": "your_microsoft_client_id",
+    "MICROSOFT_CLIENT_SECRET": "your_microsoft_client_secret"
   }
 } 
