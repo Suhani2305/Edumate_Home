@@ -1,0 +1,35 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "backend/index.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "edumate/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "backend/index.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "edumate/build/$1"
+    }
+  ],
+  "env": {
+    "MONGODB_URI": "@mongodb_uri",
+    "JWT_SECRET": "@jwt_secret",
+    "GOOGLE_AI_API_KEY": "@google_ai_api_key",
+    "GOOGLE_CLIENT_ID": "@google_client_id",
+    "GOOGLE_CLIENT_SECRET": "@google_client_secret",
+    "MICROSOFT_CLIENT_ID": "@microsoft_client_id",
+    "MICROSOFT_CLIENT_SECRET": "@microsoft_client_secret"
+  }
+} 
